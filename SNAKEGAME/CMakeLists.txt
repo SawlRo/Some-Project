@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 4.2)
+project(SNAKEGAME LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(SDL2_DIR "${CMAKE_CURRENT_SOURCE_DIR}/SDL2/lib/cmake/SDL2")
+find_package(SDL2 CONFIG REQUIRED)
+
+add_executable(SNAKEGAME GAME.cpp)
+target_link_libraries(SNAKEGAME PRIVATE SDL2::SDL2main SDL2::SDL2)
+
+add_custom_command(TARGET SNAKEGAME POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "${CMAKE_CURRENT_SOURCE_DIR}/SDL2/bin/SDL2.dll"
+        "$<TARGET_FILE_DIR:SNAKEGAME>")

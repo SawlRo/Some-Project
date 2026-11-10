@@ -1,0 +1,71 @@
+
+# IDEs and Editors
+
+# CLion
+.idea/
+*.iml
+
+# Visual Studio Code
+.vscode/
+
+# Visual Studio
+.vs/
+*.vcxproj.user
+
+# CMake Build Directories
+
+cmake-build-*/
+build/
+out/
+build-check/
+
+
+# C++ Compilation Objects and Executables
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Dynamic and Static Libraries
+*.dll
+*.so
+*.dylib
+*.lib
+*.a
+
+# Object files
+*.o
+*.obj
+*.lo
+
+# Debug and precompiled headers
+*.pdb
+*.ilk
+*.exp
+*.gch
+*.pch
+
+
+# Game-specific generated files
+
+# Local player statistics (generated at runtime)
+snake_stats.txt
+
+
+# OS generated files
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+
+# Release Packages
+
+*.zip
+*.tar.gz
+*.rar
+*.7z
